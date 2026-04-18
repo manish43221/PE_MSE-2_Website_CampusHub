@@ -18,7 +18,10 @@ import Footer from "./components/Footer";
 import FindFriendPage from "./pages/FindFriendPage";
 import ProfilePage from "./pages/ProfilePage";
 import DashboardPage from "./pages/DashboardPage";
+import AdminPage from "./pages/AdminPage";
+import HallOfFamePage from "./pages/HallOfFamePage";
 import FloatingHelpButton from "./components/FloatingHelpButton";
+import eventsData from "./data/events.json";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -36,7 +39,7 @@ const PageWrapper = ({ children }) => {
   );
 };
 
-// ✅ Main Content
+// ✅ Main Content Component
 function AppContent({
   user,
   setUser,
@@ -44,22 +47,18 @@ function AppContent({
   setRegisteredEvents,
   eventRegistrations,
   setEventRegistrations,
+  events,
+  setEvents,
 }) {
   const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 transition-all duration-500">
-
-      {/* Navbar */}
       {user && <NavBar user={user} setUser={setUser} />}
 
-      {/* Main Content */}
       <main className="flex-grow w-full max-w-7xl mx-auto px-4 py-8">
-        
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-
-            {/* Login */}
             <Route
               path="/login"
               element={
@@ -73,7 +72,6 @@ function AppContent({
               }
             />
 
-            {/* Public */}
             <Route
               path="/help"
               element={
@@ -92,13 +90,16 @@ function AppContent({
               }
             />
 
-            {/* Profile */}
             <Route
               path="/profile"
               element={
                 user ? (
                   <PageWrapper>
-                    <ProfilePage user={user} setUser={setUser} registeredEvents={registeredEvents} />
+                    <ProfilePage
+                      user={user}
+                      setUser={setUser}
+                      registeredEvents={registeredEvents}
+                    />
                   </PageWrapper>
                 ) : (
                   <Navigate to="/login" />
@@ -106,13 +107,15 @@ function AppContent({
               }
             />
 
-            {/* Dashboard */}
             <Route
               path="/dashboard"
               element={
                 user ? (
                   <PageWrapper>
-                    <DashboardPage user={user} registeredEvents={registeredEvents} />
+                    <DashboardPage
+                      user={user}
+                      registeredEvents={registeredEvents}
+                    />
                   </PageWrapper>
                 ) : (
                   <Navigate to="/login" />
@@ -120,13 +123,25 @@ function AppContent({
               }
             />
 
-            {/* Home */}
+            <Route
+              path="/hall-of-fame"
+              element={
+                user ? (
+                  <PageWrapper>
+                    <HallOfFamePage events={events} />
+                  </PageWrapper>
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
+
             <Route
               path="/"
               element={
                 user ? (
                   <PageWrapper>
-                    <EventPage />
+                    <EventPage events={events} />
                   </PageWrapper>
                 ) : (
                   <Navigate to="/login" />
@@ -134,13 +149,13 @@ function AppContent({
               }
             />
 
-            {/* Event Details */}
             <Route
               path="/events/:id"
               element={
                 user ? (
                   <PageWrapper>
                     <EventDetailsPage
+                      events={events}
                       user={user}
                       registeredEvents={registeredEvents}
                       setRegisteredEvents={setRegisteredEvents}
@@ -154,13 +169,22 @@ function AppContent({
               }
             />
 
-            {/* My Registrations */}
+            <Route
+              path="/admin"
+              element={
+                <PageWrapper>
+                  <AdminPage events={events} setEvents={setEvents} />
+                </PageWrapper>
+              }
+            />
+
             <Route
               path="/my-registrations"
               element={
                 user ? (
                   <PageWrapper>
                     <MyRegistrationPage
+                      events={events}
                       user={user}
                       registeredEvents={registeredEvents}
                       registrations={eventRegistrations}
@@ -174,7 +198,6 @@ function AppContent({
               }
             />
 
-            {/* Fallback */}
             <Route
               path="*"
               element={<Navigate to={user ? "/" : "/login"} replace />}
@@ -182,18 +205,15 @@ function AppContent({
           </Routes>
         </AnimatePresence>
 
-        {/* ✅ Floating Button OUTSIDE animation */}
         <FloatingHelpButton />
-
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
 }
 
-// ✅ Root App
+// ✅ Root App Component
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -205,11 +225,19 @@ export default function App() {
     return JSON.parse(localStorage.getItem("eventRegistrations")) || {};
   });
 
-  // Save to localStorage
+  // ✅ FIX: Initializing directly with eventsData ensures your updated JSON file
+  // with the winners is loaded, bypassing any old data in LocalStorage.
+  const [events, setEvents] = useState(eventsData);
+
+  // Sync state to localStorage
   useEffect(() => {
     localStorage.setItem("registeredEvents", JSON.stringify(registeredEvents));
-    localStorage.setItem("eventRegistrations", JSON.stringify(eventRegistrations));
-  }, [registeredEvents, eventRegistrations]);
+    localStorage.setItem(
+      "eventRegistrations",
+      JSON.stringify(eventRegistrations),
+    );
+    localStorage.setItem("events", JSON.stringify(events));
+  }, [registeredEvents, eventRegistrations, events]);
 
   return (
     <BrowserRouter>
@@ -222,6 +250,8 @@ export default function App() {
         setRegisteredEvents={setRegisteredEvents}
         eventRegistrations={eventRegistrations}
         setEventRegistrations={setEventRegistrations}
+        events={events}
+        setEvents={setEvents}
       />
     </BrowserRouter>
   );

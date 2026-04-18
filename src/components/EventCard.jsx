@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import Countdown from "./Countdown";
 import { useState } from "react";
 
@@ -66,7 +66,7 @@ export default function EventCard({ event }) {
                 : "text-slate-500 dark:text-slate-400"
             }`}>
               <span className="mr-2">Venue:</span>
-              {event.venue}
+              {event.location}
             </div>
 
             <div className="mt-4">

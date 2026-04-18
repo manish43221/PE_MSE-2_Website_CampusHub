@@ -27,7 +27,6 @@ export default function NavBar({ user, setUser }) {
     <>
       {/* 🔥 TOP HEADING */}
       <div className="relative text-center py-5 overflow-hidden shadow-md group">
-        
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient bg-[length:200%_200%]"></div>
 
         <div className="absolute w-40 h-40 bg-pink-400 opacity-30 rounded-full blur-3xl top-[-30px] left-[-30px] animate-pulse group-hover:scale-125 transition duration-500"></div>
@@ -41,7 +40,6 @@ export default function NavBar({ user, setUser }) {
       {/* 🔥 NAVBAR */}
       <nav className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-700">
         <div className="w-full flex items-center justify-evenly text-sm font-semibold h-14">
-
           {/* Discover */}
           <Link to="/" className={linkStyle("/")}>
             <span className="relative group">
@@ -51,10 +49,21 @@ export default function NavBar({ user, setUser }) {
           </Link>
 
           {/* My Tickets */}
-          <Link to="/my-registrations" className={linkStyle("/my-registrations")}>
+          <Link
+            to="/my-registrations"
+            className={linkStyle("/my-registrations")}
+          >
             <span className="relative group">
               My Tickets
               <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-gradient-to-r from-indigo-400 to-pink-400 transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </Link>
+
+          {/* 🏆 Hall of Fame */}
+          <Link to="/hall-of-fame" className={linkStyle("/hall-of-fame")}>
+            <span className="relative group">
+              Hall of Fame 🏆
+              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-gradient-to-r from-yellow-400 to-pink-400 transition-all duration-300 group-hover:w-full"></span>
             </span>
           </Link>
 
@@ -75,7 +84,10 @@ export default function NavBar({ user, setUser }) {
           </Link>
 
           {/* Theme Toggle */}
-          <button onClick={toggleTheme} className="text-lg hover:scale-110 transition">
+          <button
+            onClick={toggleTheme}
+            className="text-lg hover:scale-110 transition"
+          >
             {isDark ? "☀️" : "🌙"}
           </button>
 
@@ -88,13 +100,12 @@ export default function NavBar({ user, setUser }) {
           </Link>
 
           {/* Logout */}
-          <button 
+          <button
             onClick={handleLogout}
             className="text-red-500 hover:text-red-600 hover:scale-110 transition"
           >
             Logout
           </button>
-
         </div>
       </nav>
     </>

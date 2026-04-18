@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
-import eventsData from "../data/events.json";
 
 // QR image is rendered with an external image URL.
 export default function MyRegistrationPage({
+  events,
   user,
   registeredEvents = [],
   registrations = {},
@@ -11,7 +11,7 @@ export default function MyRegistrationPage({
   setRegistrations,
 }) {
   const safeRegisteredEvents = registeredEvents || [];
-  const myEvents = eventsData.filter((event) =>
+  const myEvents = events.filter((event) =>
     safeRegisteredEvents.includes(event.id),
   );
 

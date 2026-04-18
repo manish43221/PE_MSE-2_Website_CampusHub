@@ -1,13 +1,12 @@
 import { useState } from "react";
-import eventsData from "../data/events.json";
 import EventCard from "../components/EventCard";
 import FiltersBar from "../components/FiltersBar";
 
-export default function EventPage() {
+export default function EventPage({ events }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", ...new Set(eventsData.map((event) => event.category))];
+  const categories = ["All", ...new Set(events.map((event) => event.category))];
 
   // Check if event has ended
   const hasEventEnded = (date, time) => {
@@ -16,7 +15,7 @@ export default function EventPage() {
     return now > targetDate;
   };
 
-  const filteredEvents = eventsData
+  const filteredEvents = events
     .filter((event) => {
       const matchesSearch =
         event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

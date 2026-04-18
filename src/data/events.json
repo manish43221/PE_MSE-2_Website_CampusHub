@@ -4,109 +4,198 @@
     "title": "InnoHacks 2026",
     "date": "2026-04-15",
     "time": "09:00 AM",
-    "venue": "Main Auditorium",
+    "location": "Main Auditorium",
     "category": "Technical",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    "description": "KIET's biggest 24-hour hackathon. Build innovative solutions, meet mentors, and win exciting prizes! Free food and swags included.",
-    "capacity": 150
+    "description": "Unleash your coding potential! KIET's premier 24-hour hackathon where developers and innovators build real-world solutions. Includes specialized tracks for AI/ML and Web3. Win exciting prizes, mentorship from industry experts, and internship opportunities.",
+    "rules": [
+      "Team size: 2-4 members",
+      "Original code only (Plagiarism check applied)",
+      "Carry your own laptops and chargers",
+      "24-hour stay on campus is mandatory"
+    ],
+    "capacity": 150,
+    "winners": [
+      { "name": "Gagan Sharma", "roll": "202401100200100", "position": "Winner" },
+      { "name": "Om", "roll": "202401100200189", "position": "Runner Up" },
+      { "name": "Aryan Singh", "roll": "202401100200220", "position": "Third Place" }
+    ]
   },
   {
     "id": "2",
     "title": "Epoque@Prastuti Cultural Fest",
     "date": "2026-04-10",
     "time": "05:00 PM",
-    "venue": "Open Ground",
+    "location": "Open Ground",
     "category": "Cultural",
+    "price": "₹200",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80",
-    "description": "Join us for a night of music, dance, and art. Featuring live performances by top bands and our own KIET dance societies.",
-    "capacity": 500
+    "description": "The ultimate celebration of talent! KIET's flagship cultural fest featuring high-octane dance battles, mesmerizing music performances, and stunning art galleries. Experience the grand fashion walk and celebrity guest appearances.",
+    "rules": [
+      "Entry pass mandatory",
+      "No outside food allowed",
+      "Registration required for solo performances",
+      "Respect the campus decorum"
+    ],
+    "capacity": 500,
+    "winners": [
+      { "name": "Ishita Verma", "roll": "202401100200305", "position": "Winner" },
+      { "name": "Rahul Mehra", "roll": "202401100200412", "position": "Runner Up" }
+    ]
   },
   {
     "id": "3",
     "title": "AI & Future Seminar",
     "date": "2026-04-28",
     "time": "11:00 AM",
-    "venue": "Seminar Hall 2",
+    "location": "Seminar Hall 2",
     "category": "Workshop",
+    "price": "Free",
+    "mode": "Hybrid",
     "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
-    "description": "An interactive session with industry experts on the future of Generative AI, LLMs, and how to prepare for upcoming tech jobs.",
-    "capacity": 80
+    "description": "Step into the world of Intelligence. Join top researchers as we explore Generative AI, LLMs, and the ethics of automation. This seminar covers how AI is reshaping careers in 2026 and provides a roadmap for students to stay relevant.",
+    "rules": [
+      "Prior registration is required for certificates",
+      "Laptop recommended for hands-on session",
+      "Submit questions for Q&A in advance"
+    ],
+    "capacity": 80,
+    "winners": []
   },
   {
     "id": "4",
     "title": "KIET Premier League (KPL)",
     "date": "2026-05-02",
     "time": "04:00 PM",
-    "venue": "Sports Field",
+    "location": "Sports Field",
     "category": "Sports",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80",
-    "description": "The annual inter-branch cricket and football tournament. Come cheer for your department and witness the ultimate sporting showdown.",
-    "capacity": 1000
+    "description": "Experience the Cricket Fever! KPL brings the thrill of professional cricket to our campus. 12 departments, one trophy. Intense league matches followed by a grand finale under floodlights.",
+    "rules": [
+      "Participants must be from the same department",
+      "Proper sports kit is mandatory",
+      "Umpire's decision will be final"
+    ],
+    "capacity": 1000,
+    "winners": []
   },
   {
     "id": "5",
     "title": "Rhapsody: Battle of Bands",
     "date": "2026-05-10",
     "time": "06:30 PM",
-    "venue": "Main Auditorium",
+    "location": "Main Auditorium",
     "category": "Cultural",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
-    "description": "Top rock and pop bands from colleges across Delhi NCR compete for the title. An electrifying evening of pure musical talent.",
-    "capacity": 400
+    "description": "Let the music take control! A high-energy competition where the best student bands from across the region face off in a rock & metal showdown. The winner gets a chance to record their original track in a professional studio.",
+    "rules": [
+      "Maximum performance time: 15 mins",
+      "Bands must bring their own instruments (except drums)",
+      "Strictly no pre-recorded tracks"
+    ],
+    "capacity": 400,
+    "winners": []
   },
   {
     "id": "6",
     "title": "RoboWars Championship",
     "date": "2026-05-15",
     "time": "10:00 AM",
-    "venue": "Mechanical Block Courtyard",
+    "location": "Mechanical Courtyard",
     "category": "Technical",
+    "price": "₹500/Team",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-    "description": "Design, build, and battle! Watch remote-controlled robots destroy each other in the arena. Cash prizes for the last bot standing.",
-    "capacity": 200
+    "description": "Where Metal Meets Might! Witness heavily armored, custom-built robots clash in a bullet-proof arena. This technical challenge tests mechanical engineering, electronics, and tactical driving skills.",
+    "rules": [
+      "Bot weight limit: 15kg",
+      "No hazardous chemicals or fire-based weapons",
+      "Remote control frequency must be declared"
+    ],
+    "capacity": 200,
+    "winners": []
   },
   {
     "id": "7",
     "title": "Alumni Meet & Greet",
     "date": "2026-05-20",
     "time": "12:00 PM",
-    "venue": "Conference Center",
+    "location": "Conference Center",
     "category": "Networking",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1528605105345-5344ea20e269?auto=format&fit=crop&w=800&q=80",
-    "description": "Network with successful KIET alumni working at Google, Microsoft, Amazon, and more. Get resume reviews and career guidance.",
-    "capacity": 120
+    "description": "Connect with the Legends. An exclusive networking event to bridge the gap between current students and successful KIET alumni working in Fortune 500 companies. Get personalized career advice and referral insights.",
+    "rules": [
+      "Exclusive for Final and Pre-final year students",
+      "Formal dress code is mandatory",
+      "Carry updated resumes"
+    ],
+    "capacity": 120,
+    "winners": []
   },
   {
     "id": "8",
     "title": "UI/UX Design Bootcamp",
     "date": "2026-05-25",
     "time": "09:30 AM",
-    "venue": "Computer Lab 4",
+    "location": "Computer Lab 4",
     "category": "Workshop",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
-    "description": "A hands-on, 2-day workshop on Figma. Learn user psychology, wireframing, and how to design beautiful interfaces from scratch.",
-    "capacity": 50
+    "description": "Master the Art of Design. A hands-on intensive workshop focusing on Figma, user research, and prototyping. Learn to build pixel-perfect interfaces that solve real user problems.",
+    "rules": [
+      "Must have Figma installed",
+      "Pre-workshop assets will be emailed",
+      "Certificate awarded on project completion"
+    ],
+    "capacity": 50,
+    "winners": []
   },
   {
     "id": "9",
     "title": "E-Cell Startup Pitch",
     "date": "2026-06-05",
     "time": "02:00 PM",
-    "venue": "Seminar Hall 1",
+    "location": "Seminar Hall 1",
     "category": "Business",
-   "image": "https://e-cell.in/assets/tkt-CkKKmMeX.png",
-    "description": "Pitch your startup idea to a panel of real angel investors. The best idea gets seed funding and incubation support at KIET.",
-    "capacity": 100
+    "price": "Free",
+    "mode": "Offline",
+    "image": "https://e-cell.in/assets/tkt-CkKKmMeX.png",
+    "description": "Have a Billion-Dollar Idea? Pitch your business plan to a panel of venture capitalists and investors. Get a chance to secure seed funding and professional incubation support.",
+    "rules": [
+      "Maximum 10 slides per presentation",
+      "Pitch time: 5 minutes + 2 mins Q&A",
+      "Business model canvas is mandatory"
+    ],
+    "capacity": 100,
+    "winners": []
   },
   {
     "id": "10",
     "title": "Annual Tech Symposium",
     "date": "2026-06-12",
     "time": "10:00 AM",
-    "venue": "Main Auditorium",
+    "location": "Main Auditorium",
     "category": "Technical",
+    "price": "Free",
+    "mode": "Offline",
     "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
-    "description": "A showcase of final year projects, research papers, and guest lectures from eminent scientists and industry leaders.",
-    "capacity": 300
+    "description": "The Showcase of Innovation. A massive exhibition featuring the best final-year projects and industrial prototypes. Meet recruiters and attend keynote speeches on emerging tech like 6G.",
+    "rules": [
+      "Projects must be pre-approved by HOD",
+      "Bring your own extension boards",
+      "Abstract submission deadline: June 1st"
+    ],
+    "capacity": 300,
+    "winners": []
   }
 ]
